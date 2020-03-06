@@ -19,6 +19,7 @@ public class CustomerMapper implements RowMapper<Customer>  {
 		  Customer customer = new Customer();
 		  customer.setName(rs.getString("name"));
 		  customer.setAge(rs.getInt("age"));
+		  //write customer.setId(rs.getInt("id")); method i forgot
 	      return customer;
 		
 	}

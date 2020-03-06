@@ -2,6 +2,8 @@ package com.example.service;
 
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
@@ -13,6 +15,7 @@ import com.example.dto.Employee;
 public class EmployeeImpl implements  EmployeeService
 {
 
+	 Logger logger = LoggerFactory.getLogger(EmployeeImpl.class);
 	@Autowired
 	private EmployeeDAOImpl employeeObj;
     public void setupDB()
@@ -48,6 +51,7 @@ public class EmployeeImpl implements  EmployeeService
 	@Override
 	public void deleteEmployeeService(Integer id) 
 	{
+		logger.debug("In Service Class Delete");
 		employeeObj.delete(id);
 	
 		// TODO Auto-generated method stub

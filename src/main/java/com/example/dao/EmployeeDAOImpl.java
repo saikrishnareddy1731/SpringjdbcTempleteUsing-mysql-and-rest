@@ -83,9 +83,10 @@ public class EmployeeDAOImpl implements EmployeeDAO
 			// TODO Auto-generated method stub
 			
 			 String SQL = "delete from employee where id = ?";
+			  logger.debug("Deleted Record in DAO Method before");
 		      jdbcTemplateObject.update(SQL, id);
 		     // System.out.println("Deleted Record with ID = " + id );
-		      logger.debug("Deleted Record with ID = " + id );
+		      logger.debug("Deleted Record in DAO Method before");
 		      return;
 		}
 
